@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  font-family: calibri, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  color: #ffffff;
+  background-color:  #000000;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+
+<h2>Testing</h2>
+<p>
+<b>Key Statistics</b>
+</p>
+
+
+<table>
+<tr>
+  <th>Route</th>
+  <th>Average Fare</th>
+</tr>
+<tbody>
+{{#QUERY_RESULT_ROWS}}
+<tr>
+{{route}}
+{{average_fare}} 
+<br>
+</tr>
+
+{{/QUERY_RESULT_ROWS}}
+</tbody>
+</table>
+
+</body>
+</html>
